@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8a18ab8e-2b0f-4467-8d80-863f7273dfe1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT*FROM rumah;]]>
+	</queryString>
+	<field name="no_pelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="area" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_tanah" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipe_rumah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="luas_tanah_a" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="periode" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cicilan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="137" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="92361ac4-7e69-490d-997a-06750f538f84" style="Title" x="169" y="12" width="263" height="62"/>
+				<textElement verticalAlignment="Middle">
+					<font size="24" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Struk Penjualan Rumah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0dfcf516-7cfa-4c8d-a473-54f19fda61cc" style="SubTitle" x="198" y="62" width="185" height="35" forecolor="#000066"/>
+				<textElement>
+					<font fontName="Space Age" size="26" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="efdfcd7b-b25c-4ae8-9453-51ac2d2e0963" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="f6e00520-601f-4254-819f-0b6b9229cc70" style="Column header" x="0" y="0" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[No Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5c17e998-7457-49e9-a5c4-f972b673b901" style="Column header" x="49" y="0" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9017f167-0862-4a1e-9293-04e216a1e26e" style="Column header" x="137" y="0" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="48e0f6f5-9723-4bc3-95e3-8f4a87577232" style="Column header" x="198" y="0" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[H.Tanah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="45c4567e-c17d-46f3-a2d7-78af0a993328" style="Column header" x="261" y="0" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Tipe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d0b16762-bc89-4403-9af4-d8be2a8c336f" style="Column header" x="322" y="0" width="35" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Luas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="071f6113-4e85-479a-aa2d-9dcb875fef44" style="Column header" x="371" y="0" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="541feaf8-6fe5-4f37-9d79-02062cf2bf72" style="Column header" x="444" y="0" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Tenor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b5cbb47-a428-440c-bc04-e4c382102d35" style="Column header" x="494" y="1" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Cicilan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement uuid="a4539d1f-b97f-4e92-b5d4-4f16015ebf0b" style="Row" mode="Opaque" x="0" y="0" width="555" height="15"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="c5b9aa9b-192e-4917-9071-c3f1a976ff7e" style="Detail" x="0" y="0" width="49" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{no_pelanggan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="d28918c5-cff6-484b-a115-ee208cd6fb60" style="Detail" x="49" y="0" width="82" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="5c94daca-87cf-4476-a7e7-64b0bc8ba4fa" style="Detail" x="131" y="0" width="78" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{area}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="67484625-4c20-4e1b-849f-6d1da87909eb" style="Detail" x="198" y="0" width="61" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{harga_tanah}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="8fd9bc0f-c97a-42d9-a170-bce5a2cffa5f" style="Detail" x="261" y="0" width="51" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{tipe_rumah}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="1c181848-09e6-4d6d-b592-57c2f1a49a9e" style="Detail" x="322" y="0" width="61" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{luas_tanah_a}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="8f777977-2a5e-412e-aff8-30fc5bfcdd6b" style="Detail" x="371" y="0" width="61" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="fb2fe6e3-03db-4551-8ad3-d0e5eeecc953" style="Detail" x="459" y="0" width="29" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{periode}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="982d8fdb-0d42-43fb-b021-c171d0dc5a9a" style="Detail" x="488" y="0" width="61" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{cicilan}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="9e599234-7d53-42b3-acf5-3b2fad9fd71b" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<frame>
+				<reportElement uuid="27db0100-2f9a-4471-ad30-4ddd1e817fdb" mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#0099CC" backcolor="#CCFFFF"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="ecf7cda2-c0ce-4856-8b44-87d873d1c570" style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="687cb2a9-116c-4323-8f06-63b5548e2bb9" style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="05e88ecb-ba23-4ce1-9e1a-5ce9702f2639" style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
